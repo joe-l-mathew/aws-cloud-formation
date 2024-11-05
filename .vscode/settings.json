@@ -1,0 +1,14 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/kubernetes/kubernetes/master/cluster/gce/manifests/kubeadm-config.yaml": [
+            "/*.kubeconfig"
+        ],
+        "https://raw.githubusercontent.com/kubernetes/kubernetes/master/cluster/gce/manifests/kubernetes-master.yaml": "/*.kubernetes-manifest",
+        "https://json.schemastore.org/awscloudformation-schema": "/*.cloudformation",
+        "https://json.schemastore.org/cloudformation": "yaml*",
+        "https://json.schemastore.org/composer": [
+            "/*",
+            "file:///home/joel/Documents/aws/aws-cloud-formation/s3/s3_cft.yaml"
+        ]
+    }
+}

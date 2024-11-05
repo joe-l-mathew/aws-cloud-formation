@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resource:
+  S3-bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "Cloud-Formation-bucket"
+      VersioningConfiguration:
+        Status: Enabled
