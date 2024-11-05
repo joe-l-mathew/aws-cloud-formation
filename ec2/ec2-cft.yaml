@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+
+  SUBNET:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: 10.0.1.0/24
+      AvailabilityZone: ap-south-1a
+
+  SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow SSH access
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0 # Allow SSH from anywhere (change as needed)
+
+  EC2:
+    Type: AWS::EC2::Instance
+    Properties:
+      KeyName: mi-notebook
+      InstanceType: t3.micro
+      ImageId: ami-04a37924ffe27da53
+      SecurityGroupIds:
+        - !Ref SecurityGroup
+      SubnetId: !Ref SUBNET

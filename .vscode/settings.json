@@ -8,7 +8,8 @@
         "https://json.schemastore.org/cloudformation": "yaml*",
         "https://json.schemastore.org/composer": [
             "/*",
-            "file:///home/joel/Documents/aws/aws-cloud-formation/s3/s3_cft.yaml"
+            "file:///home/joel/Documents/aws/aws-cloud-formation/s3/s3_cft.yaml",
+            "file:///home/joel/Documents/aws/aws-cloud-formation/ec2/ec2-cft.yaml"
         ]
     }
 }
