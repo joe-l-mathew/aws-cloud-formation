@@ -3,6 +3,6 @@ Resources:
   S3bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: Cloud-Formation-bucket
+      BucketName: cloud-formation-bucket
       VersioningConfiguration:
         Status: Enabled
